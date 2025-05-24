@@ -3,7 +3,7 @@ import { ChatBubble, ChatBubbleAvatar, ChatBubbleMessage } from '@/components/ui
 export const GeneratingBubble = () => {
   return (
     <ChatBubble variant="received">
-        <ChatBubbleAvatar src="" fallback="🤖" />
+        {/* <ChatBubbleAvatar src="" fallback="🤖" /> */}
         <ChatBubbleMessage isLoading />
     </ChatBubble>
   )
