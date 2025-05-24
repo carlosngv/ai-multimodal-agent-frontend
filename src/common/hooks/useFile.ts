@@ -10,7 +10,19 @@ export const useFile = () => {
         });
     }
 
+    const onFileChange = (event: React.ChangeEvent<HTMLInputElement>, setSelectedFile: any) => {
+        const file = event.target.files?.[0];
+        console.log(file)
+        if( file && (file.type === 'application/pdf' || file.type === 'image/jpeg')) {
+        setSelectedFile( file );
+        } else if( file ) {
+        alert('Formato de archivo no permitido.')
+        }
+        event.target.value = '';
+	};
+
     return {
-        fileToBase64
+        fileToBase64,
+        onFileChange
     }
 }
